@@ -1,0 +1,64 @@
+#information {
+  height: 80em;
+  width: 100%;
+  @include media(phone-only) {
+    height: 73em;
+  }
+  @include media(tablet-portrait) {
+    height: 80em;
+  }
+  @include media(desktop) {
+    height: 170vh;
+  }
+  @include media(laptop) {
+    height: 210vh;
+  }
+  .information {
+    padding: 20px 9% 20px 200px;
+    @include media(phone-only) {
+      padding: 20px;
+    }
+    @include media(tablet-portrait) {
+      padding: 30px;
+    }
+    @include media(laptop) {
+      padding: 30px 40px;
+    }
+    .info__title {
+      padding-right: 8%;
+      @include media(phone-only) {
+        padding-right: 0px;
+      }
+    }
+    .info__subTitle {
+      padding: 20px 0px;
+      padding-right: 30%;
+      @include media(tablet-portrait) {
+        padding-bottom: 50px;
+        padding-right: 0%;
+      }
+      @include media(phone-only) {
+        padding-right: 0%;
+      }
+    }
+    .discription {
+      float: right;
+      padding: 40px 30px 30px 38%;
+      text-align: left;
+      @include media(phone-only) {
+        float: left;
+        padding: 25px 0px;
+      }
+      @include media(tablet-portrait) {
+        margin-bottom: 40px;
+        padding: 20px 40px;
+      }
+      & p:nth-child(2) {
+        margin-top: 30px;
+        @include media(phone-only) {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}

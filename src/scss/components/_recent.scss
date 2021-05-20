@@ -1,0 +1,41 @@
+#Recent {
+  height: 62em;
+  width: 100%;
+  position: relative;
+  padding-top: 200px;
+  padding-bottom: 120px;
+  background-color: #fff;
+  @include media(phone-only) {
+    height: 33em;
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+  @include media(tablet-portrait) {
+    height: 45em;
+    padding-top: 150px;
+    padding-bottom: 60px;
+  }
+  @include media(desktop) {
+    height: 150vh;
+  }
+  .recent__container {
+    padding-left: 110px;
+    padding-right: 60px;
+    @include media(phone-only) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    @include media(tablet-portrait) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    .recent__button {
+      img {
+        @include media(phone-only) {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}

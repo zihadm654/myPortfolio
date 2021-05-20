@@ -1,0 +1,26 @@
+.content {
+  padding: 10% 5%;
+  height: 100%;
+  width: 100%;
+  img {
+    height: 25px;
+    width: 25px;
+  }
+  .message {
+    padding-top: 60px;
+    @include media(phone-only) {
+      padding-top: 30px;
+    }
+  }
+}
+.hidden {
+  display: none;
+}
+.visible {
+  display: block;
+}
+.carosuel__action {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}

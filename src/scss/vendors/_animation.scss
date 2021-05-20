@@ -1,0 +1,77 @@
+.screen__loader {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0%;
+  z-index: 10;
+  background-color: $secondaryColor;
+  overflow: hidden;
+  @include flex(center);
+  .block {
+    @include flex(center);
+    color: #fff;
+    .loader__title {
+      font-size: $lar;
+      font-weight: 600;
+      margin-right: 20px;
+      @include media(phone-only) {
+        font-size: $sm-title;
+      }
+    }
+    .typeWriter {
+      @include flex(center);
+      flex-direction: column;
+      font-size: $med;
+      @include media(phone-only) {
+        font-size: $sm;
+      }
+    }
+    .counter {
+      position: absolute;
+      bottom: 30px;
+      right: 5%;
+      font-size: 3.5rem;
+    }
+    .counter::after {
+      content: "%";
+      font-size: 2rem;
+    }
+  }
+}
+.screen__loader.proActive {
+  transform: translateY(-100%);
+  transition: 1s ease-in-out;
+}
+body.flow {
+  overflow: hidden;
+}
+#cursor {
+  position: fixed;
+  width: 35px;
+  height: 35px;
+  border: 1px solid rgb(167, 164, 164);
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: 0.1s;
+  z-index: 10000;
+}
+#cursor2 {
+  position: fixed;
+  width: 7px;
+  height: 7px;
+  background-color: #000000;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: 0.15s;
+  // z-index: 10000;
+}
+p:hover ~ #cursor {
+  transform: translate(-50%, -50%), scale(2.5);
+  // opacity: 0.;
+}

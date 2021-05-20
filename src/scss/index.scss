@@ -1,0 +1,36 @@
+//functional
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+@import "helpers/color";
+
+//base
+@import "base/base";
+
+//utilities
+@import "utilities/typography";
+@import "utilities/buttons";
+
+//layouts
+@import "layouts/footer";
+@import "layouts/carosel";
+@import "layouts/grid";
+
+//components
+@import "components/hero";
+@import "components/navbar";
+@import "components/information";
+@import "components/testimonial";
+@import "components/solution";
+@import "components/skills";
+@import "components/recent";
+@import "components/about";
+@import "components/faq";
+@import "components/contact";
+
+@import "vendors/animation";
+//css link
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&family=Poppins:wght@400;500;700&display=swap");
+
+//assets

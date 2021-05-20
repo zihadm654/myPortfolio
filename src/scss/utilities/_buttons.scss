@@ -1,0 +1,350 @@
+.consultation {
+  &.is-active {
+    display: block;
+    position: absolute;
+    top: 90px;
+    width: 100%;
+    left: 0px;
+    @include flex(space-between);
+    transition: 500ms all;
+    .icon {
+      height: 40px;
+      width: 40px;
+    }
+  }
+  @include flex(center);
+  cursor: pointer;
+  @include media(phone-only) {
+    display: none;
+  }
+  .icon {
+    transition: 0.6 ease-in;
+    &:hover {
+      background-color: $secondaryColor;
+    }
+  }
+  .arrow__icon {
+    @include flex(center);
+    height: 13px;
+    width: 13px;
+  }
+}
+.mobile__menu {
+  @include media(tablet-portrait) {
+    display: none;
+  }
+}
+.hero__btn {
+  @include flex(flex-end);
+  margin: 60px 0px;
+  background: $buttonColor;
+  width: 400px;
+  height: 80px;
+  border: none;
+  @include media(tablet-portrait) {
+    width: 100%;
+    height: 75px;
+  }
+  @include media(phone-only) {
+    width: 100%;
+    margin: 20px 0px;
+    height: 75px;
+  }
+  a {
+    color: #fff;
+    cursor: pointer;
+    font-size: $phn-sm;
+    font-weight: bold;
+    margin-right: 10px;
+    text-decoration: none;
+  }
+  @include media(phone-only) {
+    width: 100%;
+    margin-top: 40px;
+  }
+}
+.callToAction {
+  @include flex(center);
+  background: $buttonColor;
+  font-size: $phn-sm;
+  color: $font-main-color;
+  font-weight: bold;
+  width: 400px;
+  height: 110px;
+  border: none;
+  cursor: pointer;
+  @include media(phone-only) {
+    width: 100%;
+  }
+  &:hover {
+    background: $buttonHoverColor2;
+    color: #fff;
+  }
+}
+.balance {
+  margin-right: 65px;
+  float: right;
+  width: 520px;
+  height: 100px;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+  @include media(phone-only) {
+    margin-right: 0px;
+    font-size: $sm;
+    width: 100%;
+  }
+  @include media(tablet-portrait) {
+    margin-right: 0px;
+    margin-top: 60px;
+    width: 100%;
+  }
+  img {
+    margin-left: 7px;
+  }
+}
+.icon {
+  margin-left: 10px;
+  border-radius: 50%;
+  height: 46px;
+  width: 46px;
+  border: 1px solid black;
+  background-color: transparent;
+  @include flex(center);
+}
+.next {
+  background-color: $buttonColor;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  cursor: pointer;
+  width: 120px;
+  height: 120px;
+  @include media(phone-only) {
+    width: 60px;
+    height: 60px;
+  }
+  @include media(tablet-portrait) {
+    width: 80px;
+    height: 80px;
+  }
+  &:hover {
+    background: #fff;
+  }
+}
+.previous {
+  background-color: $buttonColor;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  cursor: pointer;
+  width: 120px;
+  height: 120px;
+  img {
+    transform: rotate(180deg);
+  }
+  @include media(phone-only) {
+    width: 60px;
+    height: 60px;
+  }
+  @include media(tablet-portrait) {
+    width: 80px;
+    height: 80px;
+  }
+  &:hover {
+    background: #fff;
+  }
+}
+.previous {
+  margin-right: 15px;
+}
+.next {
+  margin-left: 15px;
+}
+.solution__btn {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background: $bodyColor;
+  color: $secondaryColor;
+  float: right;
+  margin-right: 180px;
+  margin-top: 50px;
+  width: 560px;
+  @include media(phone-only) {
+    font-size: $sm;
+    height: 90px;
+    margin-right: 0px;
+    width: 100%;
+  }
+  @include media(tablet-portrait) {
+    margin-right: 0px;
+    float: left;
+    width: 100%;
+    font-size: $phn-med;
+  }
+}
+.accordation.active {
+  font-weight: bold;
+  .readable {
+    display: block;
+  }
+  .unreadable {
+    display: none;
+  }
+}
+.accordation {
+  .readable {
+    display: none;
+  }
+  .unreadable {
+    display: block;
+  }
+  @include flex(space-between);
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid $secondaryColor;
+  color: $secondaryColor;
+  text-align: right;
+  font-size: $lar;
+  font-weight: 400;
+  margin: 15px 0px;
+  @include media(tablet-portrait) {
+    margin-right: 0px;
+    font-size: $phn-lar;
+  }
+  @include media(phone-only) {
+    line-height: 1.2;
+    margin-right: 0px;
+    font-size: 40px;
+  }
+}
+.recent__button {
+  margin: 10px 0px;
+  font-weight: 400;
+  &:hover {
+    font-weight: bold;
+    img {
+      transform: rotate(45deg);
+    }
+  }
+}
+.about__btn {
+  margin: 20px 0px;
+  width: 100%;
+  font-size: $med;
+  text-transform: uppercase;
+  @include media(tablet-portrait) {
+    margin-top: 60px;
+    font-size: $article;
+  }
+  @include media(phone-only) {
+    margin-top: 40px;
+    font-size: $article;
+  }
+}
+.faq__button {
+  color: #fff;
+  font-size: $med-title;
+  border-bottom: 1px solid #fff;
+  @include media(phone-only) {
+    font-size: $med;
+    text-align: left;
+  }
+  @include media(tablet-portrait) {
+    font-size: $sub-title;
+    text-align: left;
+  }
+}
+.contact__btn {
+  margin: 20px 0px;
+  @include flex(center);
+  .round {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    @include media(phone-only) {
+      height: 130px;
+      width: 130px;
+    }
+    @include media(tablet-portrait) {
+      height: 160px;
+      width: 160px;
+    }
+  }
+  .send {
+    position: relative;
+    background-color: #fff;
+    color: $secondaryColor;
+    margin: 140px 20px 20px 10px;
+    transform: rotate(-20deg);
+    @include flex(center);
+    flex-direction: column;
+    transition: 500ms all;
+    font-weight: 400;
+    font-size: $phn-sm;
+    @include media(phone-only) {
+      margin: 0px;
+      font-size: $phn-sm;
+      margin-top: 50px;
+      margin-right: 20px;
+    }
+    @include media(tablet-portrait) {
+      margin: 0px;
+      font-size: $phn-sm;
+      margin-top: 55px;
+      margin-right: 20px;
+    }
+
+    &:hover {
+      transform: rotate(10deg);
+      background-color: $mainColor;
+    }
+    img {
+      height: 40px;
+      width: 40px;
+      margin-bottom: 10px;
+      transform: rotate(-90deg);
+      @include media(phone-only) {
+        height: 33px;
+        width: 33px;
+      }
+    }
+  }
+  .book {
+    height: 260px;
+    width: 260px;
+    background-color: $secondaryColor;
+    color: #fff;
+    margin: 10px 20px 20px 10px;
+    transform: rotate(20deg);
+    @include flex(center);
+    flex-direction: column;
+    transition: 500ms;
+    line-height: 1.1;
+    font-weight: 400;
+    font-size: $article;
+    @include media(tablet-portrait) {
+      height: 200px;
+      width: 200px;
+      font-size: $phn-med;
+      margin: 0px 0px 0px 0px;
+    }
+    @include media(phone-only) {
+      height: 160px;
+      width: 160px;
+      font-size: $phn-sm;
+      margin: 0px 0px 0px 0px;
+    }
+    &:hover {
+      transform: rotate(15deg);
+      background-color: $mainColor;
+    }
+    img {
+      height: 55px;
+      width: 55px;
+      margin-bottom: 10px;
+    }
+  }
+}

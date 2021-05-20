@@ -1,0 +1,6 @@
+.hero__contents {
+    @include flex(space-between);
+}
+.big__btn {
+    @include flex(center);
+}

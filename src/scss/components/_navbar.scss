@@ -1,0 +1,53 @@
+.navbar {
+  position: relative;
+  @include flex(space-between);
+  padding: 100px 0 80px 0;
+  @include media(phone-only) {
+    padding: 60px 0px;
+    height: 5rem;
+  }
+  @include media(tablet-portrait) {
+    padding: 60px 0px;
+    height: 5rem;
+  }
+  &__logo {
+    img {
+      height: 45px;
+      width: 45px;
+      @include media(phone-only) {
+        height: 35px;
+        width: 35px;
+      }
+    }
+  }
+}
+.hamburger {
+  @include flex(center);
+  flex-direction: column;
+  cursor: pointer;
+  &.active {
+    margin-bottom: 16px;
+    .bar:nth-child(1) {
+      transform: translateY(10px) rotate(-45deg);
+      background-color: #000;
+    }
+    .bar:nth-child(2) {
+      transform: translateY(0px) rotate(45deg);
+      background-color: #000;
+    }
+  }
+  display: none;
+  @include media(phone-only) {
+    display: block;
+  }
+  .bar {
+    display: block;
+    height: 0.151rem;
+    width: 2.2rem;
+    background-color: #000;
+  }
+
+  .bar:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}

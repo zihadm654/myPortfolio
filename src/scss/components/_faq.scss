@@ -1,0 +1,39 @@
+#faq {
+  height: 75em;
+  width: 100%;
+  background-color: $secondaryColor;
+  color: #fff;
+  padding: 200px 0px;
+  @include media(phone-only) {
+    padding: 60px 0px;
+    height: 60em;
+  }
+  @include media(tablet-portrait) {
+    padding: 80px 0px;
+    height: 62em;
+  }
+  @include media(laptop) {
+    padding: 60px 0px;
+    height: 130vh;
+  }
+  .faq__container {
+    margin: 60px 0px;
+    padding-left: 250px;
+    padding-right: 60px;
+    @include media(phone-only) {
+      padding-left: 20px;
+      padding-right: 20px;
+      margin: 20px 0px;
+    }
+    @include media(tablet-portrait) {
+      padding-left: 40px;
+      padding-right: 40px;
+      margin: 40px 0px;
+    }
+    @include media(laptop) {
+      padding-left: 40px;
+      padding-right: 40px;
+      margin: 40px 0px;
+    }
+  }
+}

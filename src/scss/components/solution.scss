@@ -1,0 +1,61 @@
+#Solution {
+  height: 98em;
+  position: relative;
+  width: 100%;
+  background-color: $buttonColor;
+  padding: 200px 0px;
+  @include media(tablet-portrait) {
+    padding: 100px 0px;
+    height: 78em;
+  }
+  @include media(desktop) {
+    height: 230vh;
+  }
+  @include media(laptop) {
+    height: 280vh;
+  }
+  @include media(phone-only) {
+    height: 73em;
+    padding: 80px 0px;
+  }
+  .solution__container {
+    padding-left: 107px;
+    padding-right: 100px;
+    @include media(tablet-portrait) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    @include media(laptop) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    @include media(phone-only) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .solution__title {
+      margin-bottom: 50px;
+      @include media(phone-only) {
+        margin-bottom: 20px;
+      }
+    }
+    .solution__article {
+      float: right;
+      margin: 10px 0px;
+      margin-right: 150px;
+      width: 53%;
+      line-height: 1.2;
+      @include media(tablet-portrait) {
+        // float: left;
+        width: 100%;
+        margin-right: 0px;
+      }
+      @include media(phone-only) {
+        font-size: $sm;
+        margin-right: 0px;
+        float: left;
+        width: 100%;
+      }
+    }
+  }
+}

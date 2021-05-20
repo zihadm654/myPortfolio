@@ -1,0 +1,93 @@
+#hero {
+	height: 80em;
+	width: 100%;
+	padding-left: 100px;
+	padding-right: 45px;
+	@include media(phone-only) {
+		height: 68em;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	@include media(tablet-portrait) {
+		padding-left: 40px;
+		padding-right: 40px;
+		height: 65em;
+	}
+	@include media(laptop) {
+		padding-left: 60px;
+		padding-right: 60px;
+		height: 220vh;
+	}
+	@include media(desktop) {
+		padding-left: 60px;
+		padding-right: 60px;
+		height: 220vh;
+	}
+	.hero__container {
+		position: relative;
+		margin: 30px 0px;
+		@include media(phone-only) {
+			margin: 15px 0px;
+		}
+		@include media(tablet-portrait) {
+			margin: 10px 0px;
+		}
+		.layout {
+			max-width: 75%;
+			z-index: 1;
+			line-height: 100px;
+			@include media(phone-only) {
+				padding-top: 40px;
+				max-width: 100%;
+			}
+			@include media(tablet-portrait) {
+				padding-top: 40px;
+				max-width: 100%;
+			}
+			@include media(laptop) {
+				padding-top: 40px;
+				max-width: 100%;
+			}
+		}
+		.image__wrapper {
+			position: absolute;
+			top: -25px;
+			right: 0px;
+			height: 560px;
+			width: 45%;
+			z-index: -1;
+			@include media(phone-only) {
+				display: none;
+			}
+			@include media(tablet-portrait) {
+				display: none;
+			}
+			@include media(laptop) {
+				display: none;
+			}
+			img {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+		.short__details {
+			margin: 20px 0px;
+			width: 100%;
+			@include flex(center);
+			flex-direction: column;
+			@include media(phone-only) {
+				width: 100%;
+				margin: 20px 0px;
+				margin-left: 0px;
+				text-align: right;
+			}
+			@include media(tablet-portrait) {
+				width: 100%;
+				margin: 20px 0px;
+				margin-left: 0px;
+				text-align: right;
+			}
+		}
+	}
+}

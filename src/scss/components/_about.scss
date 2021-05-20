@@ -1,0 +1,69 @@
+#about {
+  height: 72em;
+  background: $font-main-color;
+  padding: 200px 0px;
+  @include media(phone-only) {
+    height: 95em;
+    width: 100%;
+    padding: 50px 0px;
+  }
+  @include media(tablet-portrait) {
+    height: 105em;
+    width: 100%;
+    padding: 80px 0px;
+  }
+  @include media(laptop) {
+    height: 140vh;
+    width: 100%;
+    padding: 80px 0px;
+  }
+  @include media(desktop) {
+    height: 160vh;
+  }
+  .about__container {
+    padding-left: 110px;
+    padding-right: 60px;
+    @include flex(center);
+    @include media(phone-only) {
+      padding-left: 20px;
+      flex-direction: column;
+      padding-right: 20px;
+    }
+    @include media(tablet-portrait) {
+      padding-left: 40px;
+      padding-right: 40px;
+      flex-direction: column;
+    }
+    @include media(laptop) {
+      padding-left: 50px;
+      padding-right: 50px;
+      flex-direction: column;
+    }
+    .image__wrapper {
+      width: 100%;
+      height: 100%;
+      padding-right: 20px;
+      @include media(laptop) {
+        display: none;
+      }
+      img {
+        height: 115vh;
+        @include media(phone-only) {
+          height: 100%;
+          width: 100%;
+          padding-right: 0px;
+        }
+        @include media(tablet-portrait) {
+          height: 700px;
+          width: 100%;
+          padding-right: 0px;
+        }
+      }
+    }
+    .about__content {
+      @include media(phone-only) {
+        margin: 20px 0px;
+      }
+    }
+  }
+}

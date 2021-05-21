@@ -9,10 +9,10 @@
     height: 78em;
   }
   @include media(desktop) {
-    height: 230vh;
+    height: 102em;
   }
   @include media(laptop) {
-    height: 280vh;
+    height: 112em;
   }
   @include media(phone-only) {
     height: 73em;

@@ -8,10 +8,10 @@
     height: 80em;
   }
   @include media(desktop) {
-    height: 170vh;
+    height: 102em;
   }
   @include media(laptop) {
-    height: 210vh;
+    height: 110em;
   }
   .information {
     padding: 20px 9% 20px 200px;

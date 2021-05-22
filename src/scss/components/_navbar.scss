@@ -1,3 +1,7 @@
+a{
+  text-decoration: none;
+  color: #000;
+}
 .navbar {
   position: relative;
   @include flex(space-between);
@@ -11,6 +15,7 @@
     height: 5rem;
   }
   &__logo {
+    cursor: pointer;
     img {
       height: 45px;
       width: 45px;

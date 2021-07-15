@@ -1,26 +1,18 @@
 #Solution {
-  height: 98em;
   position: relative;
   width: 100%;
   background-color: $buttonColor;
   padding: 200px 0px;
   @include media(tablet-portrait) {
     padding: 100px 0px;
-    height: 78em;
-  }
-  @include media(desktop) {
-    height: 102em;
-  }
-  @include media(laptop) {
-    height: 112em;
   }
   @include media(phone-only) {
-    height: 73em;
     padding: 80px 0px;
   }
   .solution__container {
     padding-left: 107px;
     padding-right: 100px;
+    @include grid;
     @include media(tablet-portrait) {
       padding-left: 40px;
       padding-right: 40px;
@@ -34,27 +26,32 @@
       padding-right: 20px;
     }
     .solution__title {
+      grid-column: 1/13;
       margin-bottom: 50px;
       @include media(phone-only) {
         margin-bottom: 20px;
+        grid-column: 1/13;
       }
     }
     .solution__article {
-      float: right;
+      grid-column: 7/13;
       margin: 10px 0px;
-      margin-right: 150px;
-      width: 53%;
       line-height: 1.2;
-      @include media(tablet-portrait) {
-        // float: left;
-        width: 100%;
-        margin-right: 0px;
-      }
       @include media(phone-only) {
         font-size: $sm;
         margin-right: 0px;
-        float: left;
         width: 100%;
+        grid-column: 1/13;
+      }
+    }
+    .callToAction {
+      grid-column: 7/13;
+      height: 7rem;
+      @include media(laptop) {
+        width: 450px;
+      }
+      @include media(phone-only) {
+        grid-column: 1/13;
       }
     }
   }

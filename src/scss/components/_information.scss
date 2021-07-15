@@ -1,20 +1,7 @@
 #information {
-  height: 80em;
-  width: 100%;
-  @include media(phone-only) {
-    height: 73em;
-  }
-  @include media(tablet-portrait) {
-    height: 80em;
-  }
-  @include media(desktop) {
-    height: 102em;
-  }
-  @include media(laptop) {
-    height: 110em;
-  }
   .information {
-    padding: 20px 9% 20px 200px;
+    @include grid;
+    padding: 50px;
     @include media(phone-only) {
       padding: 20px;
     }
@@ -25,12 +12,10 @@
       padding: 30px 40px;
     }
     .info__title {
-      padding-right: 8%;
-      @include media(phone-only) {
-        padding-right: 0px;
-      }
+      grid-column: 1/13;
     }
     .info__subTitle {
+      grid-column: 1/13;
       padding: 20px 0px;
       padding-right: 30%;
       @include media(tablet-portrait) {
@@ -42,11 +27,9 @@
       }
     }
     .discription {
-      float: right;
+      grid-column: 1/13;
       padding: 40px 30px 30px 38%;
-      text-align: left;
       @include media(phone-only) {
-        float: left;
         padding: 25px 0px;
       }
       @include media(tablet-portrait) {
@@ -59,6 +42,13 @@
           margin-top: 10px;
         }
       }
+    }
+    a {
+      @include media(phone-only) {
+        grid-column: 1/13;
+      }
+      grid-column: 6/12;
+      width: 400px;
     }
   }
 }
